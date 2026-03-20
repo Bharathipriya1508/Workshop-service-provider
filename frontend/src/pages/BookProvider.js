@@ -31,7 +31,9 @@ const BookProvider = () => {
 
   const fetchProvider = async () => {
     try {
+
       const response = await axios.get(`https://workshop-service-provider.onrender.com/api/providers/${id}`);
+
       setProvider(response.data);
     } catch (error) {
       console.error("Error fetching provider:", error);

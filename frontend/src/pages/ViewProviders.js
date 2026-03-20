@@ -18,6 +18,7 @@ const ViewProviders = () => {
   const fetchProvider = async () => {
     try {
       setLoading(true);
+
       const response = await axios.get(`https://workshop-service-provider.onrender.com/api/providers/${id}`);
       setProvider(response.data);
     } catch (err) {

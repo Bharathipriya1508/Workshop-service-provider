@@ -1,5 +1,12 @@
 node_modules/
+<<<<<<< HEAD
 frontend/node_modules/
 backend/node_modules/
 frontend/build/
 .env
+=======
+.pnpm-store/
+.cache/
+dist/
+build/
+>>>>>>> e21a2ac27bac5a5baccfc7c5301d1d35aea4cbc9

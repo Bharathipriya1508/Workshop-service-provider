@@ -27,7 +27,9 @@ const Home = () => {
   const fetchProviders = async () => {
     try {
       setLoading(true);
+
       const response = await axios.get("https://workshop-service-provider.onrender.com/api/providers");
+
       setProviders(response.data);
       setFilteredProviders(response.data);
     } catch (error) {
