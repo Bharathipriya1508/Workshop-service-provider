@@ -18,7 +18,7 @@ const ViewProviders = () => {
   const fetchProvider = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:5000/api/providers/${id}`);
+      const response = await axios.get(`https://workshop-service-provider.onrender.com/api/providers/${id}`);
       setProvider(response.data);
     } catch (err) {
       console.error("Error fetching provider:", err);

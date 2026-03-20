@@ -21,9 +21,9 @@ const ProviderDashboard = () => {
   const fetchBookings = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(
-        `http://localhost:5000/api/bookings/provider/${user._id}`
-      );
+     const response = await axios.get(
+  `https://workshop-service-provider.onrender.com/api/bookings/provider/${user._id}`
+);
       setBookings(response.data);
     } catch (error) {
       console.error("Error fetching bookings:", error);
