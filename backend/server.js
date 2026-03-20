@@ -8,14 +8,20 @@ import providerRoutes from "./routes/providerRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 
 dotenv.config();
-const cors = require("cors");
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://astonishing-toffee-940040.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+app.options("*", cors()); 
 app.use(express.json());
 
+
 connectDB();
-app.use(cors());
+
 app.use("/api/users", userRoutes);
 app.use("/api/providers", providerRoutes);
 app.use("/api/bookings", bookingRoutes);
